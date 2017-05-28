@@ -22,47 +22,49 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
 
-public class ActivitySplashScreen extends Activity
-{
-    
-    private static long SPLASH_MILLIS = 450;
-    
-    
+public class ActivitySplashScreen extends Activity {
+
+    private static long SPLASH_MILLIS = 2000;
+
+    private String mClassToLaunch;
+    private String mClassToLaunchPackage;
+
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
+
+        mClassToLaunchPackage = getPackageName();
+        mClassToLaunch = mClassToLaunchPackage + "." + "app.Books.Books";
+
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         LayoutInflater inflater = LayoutInflater.from(this);
         RelativeLayout layout = (RelativeLayout) inflater.inflate(
-            R.layout.splash_screen, null, false);
-        
+                R.layout.splash_screen, null, false);
+
         addContentView(layout, new LayoutParams(LayoutParams.MATCH_PARENT,
-            LayoutParams.MATCH_PARENT));
-        
+                LayoutParams.MATCH_PARENT));
+
         final Handler handler = new Handler();
-        handler.postDelayed(new Runnable()
-        {
-            
+        handler.postDelayed(new Runnable() {
+
             @Override
-            public void run()
-            {
-                
-                Intent intent = new Intent(ActivitySplashScreen.this,
-                    AboutScreen.class);
-                intent.putExtra("ACTIVITY_TO_LAUNCH",
-                    "app.Books.Books");
-                intent.putExtra("ABOUT_TEXT_TITLE", "Books");
-                intent.putExtra("ABOUT_TEXT", "Books/CR_about.html");
-                startActivity(intent);
-                
+            public void run() {
+
+                startARActivity();
             }
-            
+
         }, SPLASH_MILLIS);
     }
-    
+
+    private void startARActivity() {
+        Intent i = new Intent();
+        i.setClassName(mClassToLaunchPackage, mClassToLaunch);
+        startActivity(i);
+    }
+
 }
