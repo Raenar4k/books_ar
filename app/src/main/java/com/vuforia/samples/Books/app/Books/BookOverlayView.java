@@ -57,16 +57,16 @@ public class BookOverlayView extends RelativeLayout
     // Sets Book title in View
     public void setBookTitle(String bookTitle)
     {
-        TextView tv = (TextView) findViewById(R.id.custom_view_title);
-        tv.setText(bookTitle);
+//        TextView tv = (TextView) findViewById(R.id.custom_view_title);
+//        tv.setText(bookTitle);
     }
     
     
     // Sets Book Author in View
     public void setBookAuthor(String bookAuthor)
     {
-        TextView tv = (TextView) findViewById(R.id.custom_view_author);
-        tv.setText(bookAuthor);
+//        TextView tv = (TextView) findViewById(R.id.custom_view_author);
+//        tv.setText(bookAuthor);
     }
     
     
@@ -91,8 +91,8 @@ public class BookOverlayView extends RelativeLayout
     // Sets Book Special Price in View
     public void setYourPrice(String yourPrice)
     {
-        TextView tv = (TextView) findViewById(R.id.badge_price_value);
-        tv.setText(getContext().getString(R.string.string_$) + yourPrice);
+//        TextView tv = (TextView) findViewById(R.id.badge_price_value);
+//        tv.setText(getContext().getString(R.string.string_$) + yourPrice);
     }
     
     

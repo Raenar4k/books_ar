@@ -16,7 +16,6 @@
     <string name="content_description_cover">Cover</string>
     <string name="content_description_strike">Strike</string>
     <string name="content_description_background">Background</string>
-    <string name="book_data_touch_for_more">Нажмите чтобы узнать больше!</string>
     <string name="UPDATE_ERROR_AUTHORIZATION_FAILED_TITLE">Authorization Error</string>
     <string name="UPDATE_ERROR_PROJECT_SUSPENDED_TITLE">Authorization Error</string>
     <string name="UPDATE_ERROR_NO_NETWORK_CONNECTION_TITLE">Network Unavailable</string>
