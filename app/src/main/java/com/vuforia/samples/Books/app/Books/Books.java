@@ -603,9 +603,12 @@ public class Books extends Activity implements SampleApplicationControl
         // Checks that we have a valid book data
         if (mBookData != null)
         {
+//            mBookData.getBookUrl()
+            String url = "https://moskva.beeline.ru/customers/products/mobile/bonus/details/vigodnaya-cena-na-smartfoni-samsung-galaxy/";
+
             // Starts an Intent to open the book URL
             Intent viewIntent = new Intent("android.intent.action.VIEW",
-                Uri.parse(mBookData.getBookUrl()));
+                Uri.parse(url));
             
             startActivity(viewIntent);
         }
