@@ -19,12 +19,13 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 
 public class ActivitySplashScreen extends Activity {
 
-    private static long SPLASH_MILLIS = 2000;
+    private static long SPLASH_MILLIS = 1500;
 
     private String mClassToLaunch;
     private String mClassToLaunchPackage;
@@ -43,7 +44,7 @@ public class ActivitySplashScreen extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         LayoutInflater inflater = LayoutInflater.from(this);
-        RelativeLayout layout = (RelativeLayout) inflater.inflate(
+        FrameLayout layout = (FrameLayout) inflater.inflate(
                 R.layout.splash_screen, null, false);
 
         addContentView(layout, new LayoutParams(LayoutParams.MATCH_PARENT,
