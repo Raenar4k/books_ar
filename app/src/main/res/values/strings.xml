@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Books</string>
+    <string name="app_name">Билайн AR</string>
     <string name="app_description">Vuforia Books Sample Applications</string>
     <string name="button_start">Start</string>
     <string name="button_OK">OK</string>
@@ -9,7 +9,7 @@
     <string name="string_openParentheses">(</string>
     <string name="string_closeParentheses">)</string>
     <string name="string_ratings">ratings</string>
-    <string name="status_bar_scanning">Scanning</string>
+    <string name="status_bar_scanning">Сканирование</string>
     <string name="content_desc_vuforia_logo">Vuforia Logo</string>
     <string name="content_desc_vuforia_background">Vuforia Background</string>
     <string name="book_data_your_price">Your Price</string>
